@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118710014-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118710014-3');
+</script>
+
+    <% if content_for?(:title) %>
+  <%= content_for(:title) %>
+<% else %>
+  <title>HeyAd - Medlems side</title>
+<% end %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="shortcut icon" href="https://heyad.dk/wp-content/uploads/2018/11/cropped-HeyAd-Logo-design-Ny-1-32x32.png"/>
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
+    <title><%= Rails.configuration.application_name %></title>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" rel="stylesheet"/>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application.js" %>
+
+    <%= tag :meta, name: "stripe-public-key", content: Figaro.env.stripe_publishable_key %>
+  </head>
+
+  <body class="<%= yield (:body_class) %>">
+    <% if flash[:notice] %>
+      <div class="notification is-success global-notification">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+    <div class="notification is-danger global-notification">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
+<% if user_signed_in? %>
+    <nav class="navbar ">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://medlem.heyad.dk">
+          <img src="https://heyad.dk/wp-content/uploads/2018/11/cropped-HeyAd-Logo-design-Ny-1-32x32.png" alt="Medlems side for HeyAd" width="32" height="75">
+        </a>
+
+        <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+          <span class="icon" style="color: #333;">
+            <i class="fa fa-instagram"></i>
+          </span>
+        </a>
+
+        <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+          <span class="icon" style="color: #333;">
+            <i class="fa fa-facebook"></i>
+          </span>
+        </a>
+
+             <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+               <span></span>
+               <span></span>
+               <span></span>
+             </span>
+           </div>
+           <div id="navbarMenuHeroA" class="navbar-menu">
+             <div class="navbar-end">
+               <a class="navbar-item ">
+                 <span class="bd-emoji">👋</span> &nbsp;Livechat tider: Hverdage 07-21 og weekender 10-22
+               </a>
+               <a class="navbar-item " href="https://heyad.dk/faq">
+                 <span class="bd-emoji">💡</span> &nbsp;FAQ
+               </a>
+               <a class="navbar-item " href="https://heyad.dk/kontakt">
+                 <span class="bd-emoji">🆘</span> &nbsp;Kontakt
+               </a>
+               <a class="navbar-item " <%= link_to 'Tilbud', page_path('about') %>
+                 <span class="bd-emoji">🎁</span> &nbsp;Tilbud
+               </a>
+               <div class="navbar-item has-dropdown is-hoverable">
+                 <%= link_to 'Din konto', edit_user_registration_path, class: "navbar-link" %>
+                 <div class="navbar-dropdown is-right">
+                   <%= link_to "Rediger din konto 🔨", edit_user_registration_path, class:"navbar-item" %>
+                   <%= link_to "Log ud 🔒", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                 </div>
+
+                   </div>
+                 </div>
+               </div>
+               <div class="navbar-end">
+             </div>
+           </div>
+         </div>
+       </nav>
+
+
+       <div class="notification is-success">
+         <button class="delete"></button>
+           Vi sidder klar på livechatten ⌨️ og vi ønsker dig en rigtig god dag 🙊
+       </div>
+
+  <% else %>
+  <nav class="navbar ">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://medlem.heyad.dk/">
+        <img src="https://heyad.dk/wp-content/uploads/2018/11/cropped-HeyAd-Logo-design-Ny-1-32x32.png" alt="Kør og tjen penge dagligt" width="32" height="75">
+      </a>
+
+      <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-instagram"></i>
+        </span>
+      </a>
+
+      <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+        <span class="icon" style="color: #333;">
+          <i class="fa fa-facebook"></i>
+        </span>
+      </a>
+
+           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+             <span></span>
+             <span></span>
+             <span></span>
+           </span>
+         </div>
+         <div id="navbarMenuHeroA" class="navbar-menu">
+           <div class="navbar-end">
+             <a class="navbar-item " href="https://medlem.heyad.dk/users/sign_in">
+               <span class="bd-emoji">🤗</span> &nbsp;Log ind
+             </a>
+             <a class="navbar-item " href="https://medlem.heyad.dk/users/sign_up">
+               <span class="bd-emoji">😍</span> &nbsp;Opret konto
+             </a>
+                 </div>
+               </div>
+             </div>
+             <div class="navbar-end">
+           </div>
+         </div>
+       </div>
+     </nav>
+<% end %>
+
+  <%= yield %>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+         <a href="https://heyad.dk" target="_blank">Heyad.dk</a> Siden er i beta så skriv endelig hvis der opstår fejl.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  window.fcWidget.init({
+    token: "935ad2ba-0bf5-498a-bf55-187f7c62e2eb",
+    host: "https://wchat.freshchat.com"
+  });
+</script>
+  </body>
+</html>
