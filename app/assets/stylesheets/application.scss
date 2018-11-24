@@ -16,7 +16,7 @@ a:navbar-item {
   color: $pink;
 }
 a:link {
-color: #dd4b39;
+color: $pink;
 }
 a:active {
 color: #dd4b39;
@@ -25,13 +25,13 @@ color: #dd4b39;
   background-color: $pink;
 }
 .button.is-primary:a {
-  background-color: #dd4b39;
+  background-color: $pink;
 }
 .btn.button.is-primary:a {
   background-color: $pink;
 }
 a.button.is-primary {
-  background-color: #dd4b39;
+  background-color: $pink
 }
 .notification {
   border-radius: 0;
