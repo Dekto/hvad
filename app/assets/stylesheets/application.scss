@@ -12,8 +12,11 @@ $primary-invert: $pink-invert;
 $link: $primary;
 $link-hover: darken($primary, 20%);
 
-a.navbar-item {
+a:navbar-item {
   color: $pink;
+}
+a:link {
+color: $pink;
 }
 .notification {
   border-radius: 0;
