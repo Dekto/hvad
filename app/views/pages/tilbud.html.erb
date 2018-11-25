@@ -1,1 +1,44 @@
-<p> virker det </p>
+<div class="columns border-top">
+<% if user_signed_in? %>
+  <div class="column is-2 bg-light">
+    <div class="pl3 pr1">
+      <%= render 'panel' %>
+    </div>
+  </div>
+
+  <div class="column is-9 pl6">
+    <% @jobs.each do |job| %>
+    <div class="columns border-bottom pt4">
+      <div class="column is-1">
+        <% if !job.avatar.file.nil? %>
+          <%= link_to image_tag(job.avatar_url(:thumb), alt: job.job_author, width: 100, height: 100), job.url %>
+        <% end %>
+      </div>
+      <div class="column is-8">
+        <h3 class="title is-4 index-title"><%= link_to job.title, job %></h3>
+          <ul>
+            <li><%= link_to job.job_author, job.url %></li>
+          </ul>
+        <div class="pv2 f6">
+          <%= sanitize(job.description.truncate(200, separator: '</p>')) %>
+        </div>
+
+        </div>
+        <div class="column has-text-right">
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% else %>
+  <div class="notli">
+    <p>
+      Upps, du var lidt for hurtig, du skal først være logget ind.
+      <div class="logindud">
+      <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_in">Log ind 🤗</a>
+      <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_up">Opret dig nu 😍</a>
+        </div>
+    </p>
+  </div>
+  </div>
+  <% end %>
+</div>
