@@ -1,9 +1,29 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" rel="stylesheet"/>
-<div class="tilbud">
-  <div class="column is-7 is-offset-1">
+<div class="columns border-top">
+<% if user_signed_in? %>
+  <div class="column is-2 bg-light">
+    <div class="pl3 pr1">
+      <%= render 'panel' %>
+    </div>
+  </div>
 
-    <h1 class="title is-2">Viaplay</h1>
-</div>
-<div class="content text-serif f4">
-  <p>Viaplay bla bla bla</p>
-</div>
+  <div class="column is-9 pl6">
+    <div class="columns border-bottom pt4">
+      <div class="column is-1">
+      </div>
+      <div class="column is-8">
+        <h3 class="title is-4 index-title">Viaplay</h3>
+        <div class="pv2 f6">
+          <p>detter er viaplaydetter er viaplaydetter er viaplaydetter er viaplaydetter er viaplaydetter er viaplaydetter er viaplaydetter er viaplay</p>
+        </div>
+        <% else %>
+        <div class="notli">
+          <p>
+            Upps, du var lidt for hurtig, du skal først være logget ind.
+            <div class="logindud">
+            <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_in">Log ind 🤗</a>
+            <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_up">Opret dig nu 😍</a>
+              </div>
+          </p>
+        </div>
+        </div>
+        <% end %>
