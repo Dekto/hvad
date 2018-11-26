@@ -1,5 +1,4 @@
 <div class="columns border-top">
-        <% if user_signed_in? %>
           <div class="column is-9 pl6">
             <div class="columns border-bottom pt4">
               <div class="column is-1">
@@ -23,16 +22,4 @@
               </div>
             <% end %>
           </div>
-          <% else %>
-          <div class="notli">
-            <p>
-              Upps, du var lidt for hurtig, du skal først være logget ind.
-              <div class="logindud">
-              <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_in">Log ind 🤗</a>
-              <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_up">Opret dig nu 😍</a>
-                </div>
-            </p>
-          </div>
-          </div>
-          <% end %>
         </div>
