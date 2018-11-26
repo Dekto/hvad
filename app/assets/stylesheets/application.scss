@@ -15,6 +15,11 @@ $link-hover: darken($primary, 20%);
 a:navbar-item {
   color: $pink;
 }
+div.box {
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 a:link {
 color: $pink;
 }
