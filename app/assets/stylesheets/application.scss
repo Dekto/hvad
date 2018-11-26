@@ -19,6 +19,7 @@ div.box {
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: inherit;
 }
 a:link {
 color: $pink;
