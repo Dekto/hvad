@@ -92,9 +92,9 @@
                </div>
              </div>
            </div>
-              <div>
+              <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-item has-dropdown is-hoverable">
-                   <%= link_to '<strong>Din konto</strong>', edit_user_registration_path, class: "navbar-link" %>
+                   <%= link_to 'Din konto', edit_user_registration_path, class: "navbar-link" %>
                      <div class="navbar-dropdown is-right">
                          <%= link_to "Rediger din konto", edit_user_registration_path, class:"navbar-item" %>
                          <%= link_to "Log ud", destroy_user_session_path, method: :delete, class:"navbar-item" %>
