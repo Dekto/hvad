@@ -92,21 +92,21 @@
                </div>
              </div>
            </div>
-          <div class="kontobar">
-                <a class="konto">
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-item">
                    <%= link_to 'Din konto', edit_user_registration_path, class: "navbar-link" %>
                      <div class="navbar-dropdown is-right">
                          <%= link_to "Rediger din konto", edit_user_registration_path, class:"navbar-item" %>
                          <%= link_to "Log ud", destroy_user_session_path, method: :delete, class:"navbar-item" %>
                </a>
-          </div>
+              </div>
            <div class="navbar-end">
              <div class="navbar-item">
                <div class="field is-grouped">
                  <p class="control">
-                   <a class="bd-tw-button button" target="_blank" href="https://heyad.dk/kontakt">>
+                   <a class="bd-tw-button button" target="_blank" href="https://heyad.dk/kontakt">
                      <span>
-                       Kontakt os
+                     Kontakt os
                      </span>
                    </a>
                  </p>
