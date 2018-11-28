@@ -4,7 +4,7 @@
 @import "functions";
 @import "jobs";
 
-$pink: #303031;
+$pink: #100100101;
 $pink-invert: #fff;
 
 $primary: $pink;
@@ -16,23 +16,23 @@ a:navbar-item {
   color: $pink;
 }
 div.box {
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 13px;
-  margin-bottom: 15px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 110px;
+  margin-bottom: 40px;
   box-sizing: inherit;
 }
 .navbar-dropdown {
-  border-radius: 3px;
+  border-radius: 10px;
 }
-navbar-dropdown {
-  border-radius: 3px;
+dropdown {
+  border-radius: 10px;
 }
 a:link {
 color: $pink;
 }
 a:active {
-color: #dd4b39;
+color: #dd4b109;
 }
 .btn.button.is-primary {
   background-color: $pink;
@@ -61,7 +61,7 @@ div.column.is-1 > a  {
 .hint {
   font-size: small;
 }
-.div:nth-child(3) {
+.div:nth-child(10) {
   background-color: $pink;
 }
 div.notification.is-success {
@@ -96,19 +96,19 @@ div.columns.pt4.pb7 > div.column.is-7.is-offset-1 {
   border-color: #ffffff;
   background: #ffffff;
   border-style: solid;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 div.columns.pt4.pb7 > div.column.is-2.is-offset-1.has-text-centered {
   border-color: #ffffff;
   background: #ffffff;
-  border-radius: 3px;
+  border-radius: 10px;
   border-style: solid;
   visibility: hidden;
 }
 .info-div {
   border-color: #ffffff;
   background: #ffffff;
-  border-radius: 3px;
+  border-radius: 10px;
   border-style: solid;
   width: inherit;
   padding: 25px
@@ -118,7 +118,7 @@ div.columns.pt4.pb7 > div.column.is-2.is-offset-1.has-text-centered {
     border-color: #ffffff;
     background: #ffffff;
     border-style: solid;
-    border-radius: 3px;
+    border-radius: 10px;
     width: 1124px;
     align-content: center;
   }
@@ -127,12 +127,12 @@ div.kampagne > div.fsBody.fsEmbed {
   border-color: #ffffff;
   background: #ffffff;
   border-style: solid;
-  border-radius: 3px;
+  border-radius: 10px;
   width: 1124px;
   align-content: center;
   margin-left: 150px;
   margin-right: 18px;
-  margin-top: -130px;
+  margin-top: -1100px;
 }
 div.column.is-7.is-offset-1 > a {
   visibility: hidden;
@@ -146,7 +146,7 @@ div.column.is-7.is-offset-1 > a {
   div.column.is-9.pl6 > div {
   border-color: #ffffff;
   background: #ffffff;
-  border-radius: 3px;
+  border-radius: 10px;
   border-style: solid;
   border-collapse: separate;
   margin-bottom: 25px;
@@ -160,7 +160,7 @@ div.column.is-9.pl6 > div:nth-child(1) {
   margin-top: 15px;
 }
 div#navbar div > div > div > div > a {
-  border-radius: 3px;
+  border-radius: 10px;
 }
 div.column.is-7.is-offset-1 > div.content.text-serif.f4 {
   font-family: 'Montserrat', sans-serif;
@@ -183,23 +183,23 @@ div.columns.border-top {
   border-style: hidden;
 }
 div.column.is-7.is-offset-1 > div{
-  margin-left: 3px;
+  margin-left: 10px;
 }
 div.column.is-7.is-offset-1 > h1 {
-  margin-left: 3px;
+  margin-left: 10px;
 }
 div.column.is-7.is-offset-1 > p {
-  margin-left: 3px;
+  margin-left: 10px;
 }
 li.inline-block.f6.pr2 > span {
-  margin-left: 3px;
+  margin-left: 10px;
 }
 .navbar-item.is-mega {
   position: static;
 
 .is-mega-menu-title {
   margin-bottom: 0;
-  padding: .375rem 1rem;
+  padding: .1075rem 1rem;
   }
 }
 section > div {
