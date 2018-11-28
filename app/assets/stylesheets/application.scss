@@ -22,6 +22,9 @@ div.box {
   margin-bottom: 5px;
   box-sizing: inherit;
 }
+.navbar-item:hover {
+  color: $pink;
+}
 .navbar-dropdown {
   border-radius: 10px;
 }
